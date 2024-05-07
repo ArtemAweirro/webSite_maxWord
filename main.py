@@ -13,9 +13,6 @@ def upload_file():
 
     file = request.files['file']
 
-    if file.filename == '':
-        return "Файл не выбран"
-
     fileName = 'templates/fileFromServer.txt'
     file.save(fileName)
     result = findCommon_word(fileName)
